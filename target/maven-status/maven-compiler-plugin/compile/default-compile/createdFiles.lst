@@ -1,0 +1,17 @@
+com/bancaya/challenge/pokemon_soap/repository/RequestLogRepository.class
+com/bancaya/challenge/pokemon_soap/model/soap/GetPokemonResponse.class
+com/bancaya/challenge/pokemon_soap/model/dto/PokemonDTO.class
+com/bancaya/challenge/pokemon_soap/model/entity/RequestLog.class
+com/bancaya/challenge/pokemon_soap/service/PokemonService.class
+com/bancaya/challenge/pokemon_soap/service/LogService.class
+com/bancaya/challenge/pokemon_soap/model/soap/GetPokemonRequest.class
+com/bancaya/challenge/pokemon_soap/utils/Utils.class
+com/bancaya/challenge/pokemon_soap/controller/PokemonEndpoint.class
+com/bancaya/challenge/pokemon_soap/model/soap/package-info.class
+com/bancaya/challenge/pokemon_soap/service/impl/PokemonServiceImpl.class
+com/bancaya/challenge/pokemon_soap/config/RestClientConfig.class
+com/bancaya/challenge/pokemon_soap/config/WebServiceConfig.class
+com/bancaya/challenge/pokemon_soap/model/entity/RequestLog$RequestLogBuilder.class
+com/bancaya/challenge/pokemon_soap/service/impl/LogServiceImpl.class
+com/bancaya/challenge/pokemon_soap/model/dto/externalAPI/PokeApiPokemonDto.class
+com/bancaya/challenge/pokemon_soap/PokemonSoapApplication.class

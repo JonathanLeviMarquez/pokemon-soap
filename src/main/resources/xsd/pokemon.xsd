@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://bancaya.com/challenge/pokemon"
+           xmlns:tns="http://bancaya.com/challenge/pokemon"
+           elementFormDefault="qualified">
+
+    <!--Request: getPokemon by name-->
+    <xs:element name="GetPokemonRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+    <!--Response: fields from PokemonAPI -->
+    <xs:element name="GetPokemonResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+                <xs:element name="height" type="xs:int"/>
+                <xs:element name="weight" type="xs:int"/>
+                <xs:element name="baseExperience" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+</xs:schema>

@@ -1,0 +1,16 @@
+/Users/jonathanlevimarquezgarcia/IdeaProjects/pokemon-soap/src/main/java/com/bancaya/challenge/pokemon_soap/PokemonSoapApplication.java
+/Users/jonathanlevimarquezgarcia/IdeaProjects/pokemon-soap/src/main/java/com/bancaya/challenge/pokemon_soap/config/RestClientConfig.java
+/Users/jonathanlevimarquezgarcia/IdeaProjects/pokemon-soap/src/main/java/com/bancaya/challenge/pokemon_soap/config/WebServiceConfig.java
+/Users/jonathanlevimarquezgarcia/IdeaProjects/pokemon-soap/src/main/java/com/bancaya/challenge/pokemon_soap/controller/PokemonEndpoint.java
+/Users/jonathanlevimarquezgarcia/IdeaProjects/pokemon-soap/src/main/java/com/bancaya/challenge/pokemon_soap/model/dto/PokemonDTO.java
+/Users/jonathanlevimarquezgarcia/IdeaProjects/pokemon-soap/src/main/java/com/bancaya/challenge/pokemon_soap/model/dto/externalAPI/PokeApiPokemonDto.java
+/Users/jonathanlevimarquezgarcia/IdeaProjects/pokemon-soap/src/main/java/com/bancaya/challenge/pokemon_soap/model/entity/RequestLog.java
+/Users/jonathanlevimarquezgarcia/IdeaProjects/pokemon-soap/src/main/java/com/bancaya/challenge/pokemon_soap/model/soap/GetPokemonRequest.java
+/Users/jonathanlevimarquezgarcia/IdeaProjects/pokemon-soap/src/main/java/com/bancaya/challenge/pokemon_soap/model/soap/GetPokemonResponse.java
+/Users/jonathanlevimarquezgarcia/IdeaProjects/pokemon-soap/src/main/java/com/bancaya/challenge/pokemon_soap/model/soap/package-info.java
+/Users/jonathanlevimarquezgarcia/IdeaProjects/pokemon-soap/src/main/java/com/bancaya/challenge/pokemon_soap/repository/RequestLogRepository.java
+/Users/jonathanlevimarquezgarcia/IdeaProjects/pokemon-soap/src/main/java/com/bancaya/challenge/pokemon_soap/service/LogService.java
+/Users/jonathanlevimarquezgarcia/IdeaProjects/pokemon-soap/src/main/java/com/bancaya/challenge/pokemon_soap/service/PokemonService.java
+/Users/jonathanlevimarquezgarcia/IdeaProjects/pokemon-soap/src/main/java/com/bancaya/challenge/pokemon_soap/service/impl/LogServiceImpl.java
+/Users/jonathanlevimarquezgarcia/IdeaProjects/pokemon-soap/src/main/java/com/bancaya/challenge/pokemon_soap/service/impl/PokemonServiceImpl.java
+/Users/jonathanlevimarquezgarcia/IdeaProjects/pokemon-soap/src/main/java/com/bancaya/challenge/pokemon_soap/utils/Utils.java

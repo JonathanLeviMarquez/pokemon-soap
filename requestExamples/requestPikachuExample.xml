@@ -1,0 +1,9 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:pok="http://bancaya.com/challenge/pokemon">
+  <soapenv:Header/>
+  <soapenv:Body>
+    <pok:GetPokemonRequest>
+      <pok:name>pikachu</pok:name>
+    </pok:GetPokemonRequest>
+  </soapenv:Body>
+</soapenv:Envelope>
