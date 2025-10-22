@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PokemonServiceImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">pokemon-soap</a> &gt; <a href="index.source.html" class="el_package">com.bancaya.challenge.pokemon_soap.service.impl</a> &gt; <span class="el_source">PokemonServiceImpl.java</span></div><h1>PokemonServiceImpl.java</h1><pre class="source lang-java linenums">package com.bancaya.challenge.pokemon_soap.service.impl;
+
+
+import com.bancaya.challenge.pokemon_soap.model.dto.PokemonDTO;
+import com.bancaya.challenge.pokemon_soap.model.dto.externalAPI.PokeApiPokemonDto;
+import com.bancaya.challenge.pokemon_soap.service.PokemonService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestClient;
+import org.springframework.web.client.HttpClientErrorException;
+import org.springframework.web.client.RestClientException;
+
+
+@Service
+@RequiredArgsConstructor
+public class PokemonServiceImpl implements PokemonService {
+    private final RestClient pokeApiClient;
+
+
+    @Override
+    public PokemonDTO getPokemonByName(String name) {
+        try {
+            //call external api  method:GET urL:/pokemon/{name}
+<span class="fc" id="L24">            PokeApiPokemonDto p = pokeApiClient.get()</span>
+<span class="fc" id="L25">                    .uri(uri -&gt; uri.path(&quot;/pokemon/{name}&quot;).build(name.toLowerCase()))</span>
+<span class="fc" id="L26">                    .retrieve()</span>
+<span class="fc" id="L27">                    .body(PokeApiPokemonDto.class);</span>
+
+<span class="pc bpc" id="L29" title="1 of 2 branches missed.">            if (p == null) {</span>
+<span class="nc" id="L30">                throw new RestClientException(&quot;Empty body  from PokeAPI &quot;);</span>
+            }
+
+<span class="fc" id="L33">            return new PokemonDTO( p.name(), p.height(), p.weight() , p.baseExperience());</span>
+
+<span class="nc" id="L35">        } catch (HttpClientErrorException.NotFound e) {</span>
+            // {name} was not found
+<span class="nc" id="L37">            throw new IllegalArgumentException(&quot;Pokemon not found: &quot; + name);</span>
+<span class="nc" id="L38">        } catch (RestClientException e) {</span>
+            // network or parsing error
+<span class="nc" id="L40">            throw new IllegalStateException(&quot;Error calling PokeAPI: &quot; + e.getMessage(), e);</span>
+        }
+    }
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

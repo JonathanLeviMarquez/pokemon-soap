@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>LogServiceImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">pokemon-soap</a> &gt; <a href="index.source.html" class="el_package">com.bancaya.challenge.pokemon_soap.service.impl</a> &gt; <span class="el_source">LogServiceImpl.java</span></div><h1>LogServiceImpl.java</h1><pre class="source lang-java linenums">package com.bancaya.challenge.pokemon_soap.service.impl;
+
+import com.bancaya.challenge.pokemon_soap.service.LogService;
+import com.bancaya.challenge.pokemon_soap.model.entity.RequestLog;
+import com.bancaya.challenge.pokemon_soap.repository.RequestLogRepository;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+import java.time.OffsetDateTime;
+
+@Service
+@RequiredArgsConstructor
+public class LogServiceImpl implements LogService {
+    private final RequestLogRepository repository;
+
+    @Override
+    public void save(String clientIp, String method, long elapsedMs) {
+<span class="nc" id="L17">        RequestLog log = RequestLog.builder()</span>
+<span class="nc" id="L18">                .clientIp(clientIp)</span>
+<span class="nc" id="L19">                .method(method)</span>
+<span class="nc" id="L20">                .elapsedMs(elapsedMs)</span>
+<span class="nc" id="L21">                .timestamp(OffsetDateTime.now())</span>
+<span class="nc" id="L22">                .build();</span>
+<span class="nc" id="L23">        repository.save(log);</span>
+<span class="nc" id="L24">    }</span>
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

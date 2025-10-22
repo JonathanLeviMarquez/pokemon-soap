@@ -98,6 +98,11 @@ SELECT * FROM REQUEST_LOG;
 ./mvnw clean verify
 ```
 
+## Cucumber Scenarios
+```bash
+mvn -q -Dtest=CucumberIT test
+```
+
 ## Author
 ```text
 Jonathan Levi Márquez García

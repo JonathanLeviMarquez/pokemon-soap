@@ -1,3 +1,6 @@
 /Users/jonathanlevimarquezgarcia/IdeaProjects/pokemon-soap/src/test/java/com/bancaya/challenge/pokemon_soap/PokemonSoapApplicationTests.java
+/Users/jonathanlevimarquezgarcia/IdeaProjects/pokemon-soap/src/test/java/com/bancaya/challenge/pokemon_soap/bdd/CucumberIT.java
+/Users/jonathanlevimarquezgarcia/IdeaProjects/pokemon-soap/src/test/java/com/bancaya/challenge/pokemon_soap/bdd/CucumberSpringConfig.java
+/Users/jonathanlevimarquezgarcia/IdeaProjects/pokemon-soap/src/test/java/com/bancaya/challenge/pokemon_soap/bdd/SoapPokemonStepDefs.java
 /Users/jonathanlevimarquezgarcia/IdeaProjects/pokemon-soap/src/test/java/com/bancaya/challenge/pokemon_soap/controller/PokemonEndpointIT.java
 /Users/jonathanlevimarquezgarcia/IdeaProjects/pokemon-soap/src/test/java/com/bancaya/challenge/pokemon_soap/service/PokemonServiceImplTest.java

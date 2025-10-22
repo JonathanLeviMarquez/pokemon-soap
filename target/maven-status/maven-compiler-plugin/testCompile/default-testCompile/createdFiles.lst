@@ -1,3 +1,6 @@
+com/bancaya/challenge/pokemon_soap/bdd/CucumberIT.class
+com/bancaya/challenge/pokemon_soap/bdd/CucumberSpringConfig.class
+com/bancaya/challenge/pokemon_soap/PokemonSoapApplicationTests.class
+com/bancaya/challenge/pokemon_soap/bdd/SoapPokemonStepDefs.class
 com/bancaya/challenge/pokemon_soap/controller/PokemonEndpointIT.class
 com/bancaya/challenge/pokemon_soap/service/PokemonServiceImplTest.class
-com/bancaya/challenge/pokemon_soap/PokemonSoapApplicationTests.class

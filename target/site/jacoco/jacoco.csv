@@ -1,0 +1,12 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+pokemon-soap,com.bancaya.challenge.pokemon_soap.config,WebServiceConfig,0,50,0,0,0,12,0,4,0,4
+pokemon-soap,com.bancaya.challenge.pokemon_soap.config,RestClientConfig,0,8,0,0,0,4,0,2,0,2
+pokemon-soap,com.bancaya.challenge.pokemon_soap.controller,PokemonEndpoint,46,9,0,0,11,4,1,1,1,1
+pokemon-soap,com.bancaya.challenge.pokemon_soap.utils,Utils,32,0,4,0,9,0,4,0,2,0
+pokemon-soap,com.bancaya.challenge.pokemon_soap.model.dto,PokemonDTO,0,15,0,0,0,1,0,1,0,1
+pokemon-soap,com.bancaya.challenge.pokemon_soap.model.dto.externalAPI,PokeApiPokemonDto,0,15,0,0,0,1,0,1,0,1
+pokemon-soap,com.bancaya.challenge.pokemon_soap.service.impl,PokemonServiceImpl,21,37,1,1,5,6,1,2,0,2
+pokemon-soap,com.bancaya.challenge.pokemon_soap.service.impl,LogServiceImpl,17,0,0,0,8,0,1,0,1,0
+pokemon-soap,com.bancaya.challenge.pokemon_soap.model.soap,GetPokemonResponse,31,0,0,0,9,0,9,0,9,0
+pokemon-soap,com.bancaya.challenge.pokemon_soap.model.soap,GetPokemonRequest,10,0,0,0,3,0,3,0,3,0
+pokemon-soap,com.bancaya.challenge.pokemon_soap,PokemonSoapApplication,5,3,0,0,2,1,1,1,1,1

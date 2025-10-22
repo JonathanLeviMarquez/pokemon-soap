@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PokemonEndpoint.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">pokemon-soap</a> &gt; <a href="index.source.html" class="el_package">com.bancaya.challenge.pokemon_soap.controller</a> &gt; <span class="el_source">PokemonEndpoint.java</span></div><h1>PokemonEndpoint.java</h1><pre class="source lang-java linenums">package com.bancaya.challenge.pokemon_soap.controller;
+
+import com.bancaya.challenge.pokemon_soap.model.dto.PokemonDTO;
+import com.bancaya.challenge.pokemon_soap.model.soap.GetPokemonRequest;
+import com.bancaya.challenge.pokemon_soap.model.soap.GetPokemonResponse;
+import com.bancaya.challenge.pokemon_soap.service.LogService;
+import com.bancaya.challenge.pokemon_soap.service.PokemonService;
+import com.bancaya.challenge.pokemon_soap.utils.Utils;
+import org.springframework.ws.server.endpoint.annotation.Endpoint;
+import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
+import org.springframework.ws.server.endpoint.annotation.RequestPayload;
+import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
+
+import java.util.concurrent.TimeUnit;
+
+@Endpoint
+public class PokemonEndpoint {
+
+    private static final String NS = &quot;http://bancaya.com/challenge/pokemon&quot;;
+    private static final String METHOD = &quot;GetPokemon&quot;;
+
+    private final PokemonService pokemonService;
+    private final LogService logService;
+<span class="fc" id="L24">    public PokemonEndpoint(PokemonService pokemonService, LogService logService) {</span>
+<span class="fc" id="L25">        this.pokemonService = pokemonService;</span>
+<span class="fc" id="L26">        this.logService = logService;</span>
+<span class="fc" id="L27">    }</span>
+
+
+    @PayloadRoot(namespace = NS, localPart = &quot;GetPokemonRequest&quot;)
+    @ResponsePayload
+    public GetPokemonResponse getPokemon(@RequestPayload GetPokemonRequest request) {
+<span class="nc" id="L33">        long start = System.nanoTime();</span>
+        try {
+<span class="nc" id="L35">            PokemonDTO dto = pokemonService.getPokemonByName(request.getName());</span>
+
+<span class="nc" id="L37">            GetPokemonResponse resp = new GetPokemonResponse();</span>
+<span class="nc" id="L38">            resp.setName(dto.name());</span>
+<span class="nc" id="L39">            resp.setHeight(dto.height());</span>
+<span class="nc" id="L40">            resp.setWeight(dto.weight());</span>
+<span class="nc" id="L41">            resp.setBaseExperience(dto.baseExperience());</span>
+<span class="nc" id="L42">            return resp;</span>
+
+        } finally {
+<span class="nc" id="L45">            String clientIp = Utils.resolveClientIp();</span>
+<span class="nc" id="L46">            long elapsedMs = TimeUnit.NANOSECONDS.toMillis(System.nanoTime() - start);</span>
+<span class="nc" id="L47">            logService.save(clientIp, METHOD, elapsedMs);</span>
+        }
+    }
+
+
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
