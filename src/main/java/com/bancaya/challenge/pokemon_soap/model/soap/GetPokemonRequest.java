@@ -3,6 +3,7 @@ package com.bancaya.challenge.pokemon_soap.model.soap;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
 
+//JAXB-generated class representing the SOAP request
 @XmlRootElement(name = "GetPokemonRequest")
 @XmlType(propOrder = {"name"})
 public class GetPokemonRequest {

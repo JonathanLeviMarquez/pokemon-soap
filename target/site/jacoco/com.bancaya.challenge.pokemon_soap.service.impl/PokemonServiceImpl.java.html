@@ -10,13 +10,13 @@ import org.springframework.web.client.RestClient;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestClientException;
 
-
+// service implementation that consumes the external PokeAPI REST endpoint
 @Service
 @RequiredArgsConstructor
 public class PokemonServiceImpl implements PokemonService {
     private final RestClient pokeApiClient;
 
-
+    //  fetches Pokémon details by name and maps the response into a DTO
     @Override
     public PokemonDTO getPokemonByName(String name) {
         try {

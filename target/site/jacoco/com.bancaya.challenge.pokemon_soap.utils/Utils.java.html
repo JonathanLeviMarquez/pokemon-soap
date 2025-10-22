@@ -3,19 +3,20 @@
 import org.springframework.ws.transport.context.TransportContextHolder;
 import org.springframework.ws.transport.http.HttpServletConnection;
 
-<span class="nc" id="L6">public class Utils {</span>
+
+<span class="nc" id="L7">public class Utils {</span>
     public static String resolveClientIp() {
         try {
             HttpServletConnection conn =
-<span class="nc" id="L10">                    (HttpServletConnection) TransportContextHolder.getTransportContext().getConnection();</span>
-<span class="nc" id="L11">            var req = conn.getHttpServletRequest();</span>
-<span class="nc" id="L12">            String xff = req.getHeader(&quot;X-Forwarded-For&quot;);</span>
-<span class="nc bnc" id="L13" title="All 4 branches missed.">            if (xff != null &amp;&amp; !xff.isBlank()) {</span>
-<span class="nc" id="L14">                return xff.split(&quot;,&quot;)[0].trim();</span>
+<span class="nc" id="L11">                    (HttpServletConnection) TransportContextHolder.getTransportContext().getConnection();</span>
+<span class="nc" id="L12">            var req = conn.getHttpServletRequest();</span>
+<span class="nc" id="L13">            String xff = req.getHeader(&quot;X-Forwarded-For&quot;);</span>
+<span class="nc bnc" id="L14" title="All 4 branches missed.">            if (xff != null &amp;&amp; !xff.isBlank()) {</span>
+<span class="nc" id="L15">                return xff.split(&quot;,&quot;)[0].trim();</span>
             }
-<span class="nc" id="L16">            return req.getRemoteAddr();</span>
-<span class="nc" id="L17">        } catch (Exception e) {</span>
-<span class="nc" id="L18">            return &quot;unknown&quot;;</span>
+<span class="nc" id="L17">            return req.getRemoteAddr();</span>
+<span class="nc" id="L18">        } catch (Exception e) {</span>
+<span class="nc" id="L19">            return &quot;unknown&quot;;</span>
         }
     }
 }

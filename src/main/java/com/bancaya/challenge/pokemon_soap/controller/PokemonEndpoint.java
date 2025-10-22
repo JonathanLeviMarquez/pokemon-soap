@@ -13,6 +13,7 @@ import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 
 import java.util.concurrent.TimeUnit;
 
+// Handles incoming SOAP requests for pokemon data
 @Endpoint
 public class PokemonEndpoint {
 
@@ -26,7 +27,7 @@ public class PokemonEndpoint {
         this.logService = logService;
     }
 
-
+    //Process the getPokemonRequest SOAP message and returns basic Pokemon info
     @PayloadRoot(namespace = NS, localPart = "GetPokemonRequest")
     @ResponsePayload
     public GetPokemonResponse getPokemon(@RequestPayload GetPokemonRequest request) {

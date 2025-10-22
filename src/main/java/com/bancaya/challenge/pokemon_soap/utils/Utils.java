@@ -3,6 +3,7 @@ package com.bancaya.challenge.pokemon_soap.utils;
 import org.springframework.ws.transport.context.TransportContextHolder;
 import org.springframework.ws.transport.http.HttpServletConnection;
 
+
 public class Utils {
     public static String resolveClientIp() {
         try {

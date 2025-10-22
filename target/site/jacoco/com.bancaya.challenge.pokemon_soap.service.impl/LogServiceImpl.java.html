@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import java.time.OffsetDateTime;
 
+//Implementation of  LogService that stores request logs in the  H2 database
 @Service
 @RequiredArgsConstructor
 public class LogServiceImpl implements LogService {
@@ -14,14 +15,14 @@ public class LogServiceImpl implements LogService {
 
     @Override
     public void save(String clientIp, String method, long elapsedMs) {
-<span class="nc" id="L17">        RequestLog log = RequestLog.builder()</span>
-<span class="nc" id="L18">                .clientIp(clientIp)</span>
-<span class="nc" id="L19">                .method(method)</span>
-<span class="nc" id="L20">                .elapsedMs(elapsedMs)</span>
-<span class="nc" id="L21">                .timestamp(OffsetDateTime.now())</span>
-<span class="nc" id="L22">                .build();</span>
-<span class="nc" id="L23">        repository.save(log);</span>
-<span class="nc" id="L24">    }</span>
+<span class="nc" id="L18">        RequestLog log = RequestLog.builder()</span>
+<span class="nc" id="L19">                .clientIp(clientIp)</span>
+<span class="nc" id="L20">                .method(method)</span>
+<span class="nc" id="L21">                .elapsedMs(elapsedMs)</span>
+<span class="nc" id="L22">                .timestamp(OffsetDateTime.now())</span>
+<span class="nc" id="L23">                .build();</span>
+<span class="nc" id="L24">        repository.save(log);</span>
+<span class="nc" id="L25">    }</span>
 
 
 }

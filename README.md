@@ -102,6 +102,25 @@ SELECT * FROM REQUEST_LOG;
 ```bash
 mvn -q -Dtest=CucumberIT test
 ```
+## SonarCloud Analysis
+This project uses JaCoCo for  test coverage and SonarCloud for  static code analysis.
+
+### Generate coverage report 
+```bash
+mvn clean verify
+# Report: target/site/jacoco/*
+```
+
+### Run SonarCloud analysys
+```bash
+mvn sonar:sonar \
+  -Dsonar.projectKey=<YOUR_PROJECT_KEY> \
+  -Dsonar.organization=<YOUR_ORG> \
+  -Dsonar.host.url=https://sonarcloud.io \
+  -Dsonar.token=<YOUR_TOKEN> \
+  -Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml
+```
+
 
 ## Author
 ```text

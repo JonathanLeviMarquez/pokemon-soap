@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import java.time.OffsetDateTime;
 
+//Implementation of  LogService that stores request logs in the  H2 database
 @Service
 @RequiredArgsConstructor
 public class LogServiceImpl implements LogService {

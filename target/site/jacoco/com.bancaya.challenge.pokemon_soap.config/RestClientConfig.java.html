@@ -5,10 +5,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestClient;
 
-@Configuration
+@Configuration //Marks this clas as SPring configuraition class
 <span class="fc" id="L9">public class RestClientConfig {</span>
 
-    @Bean
+    @Bean //Provides apre-configured Rest template bean for HTTP requests
     RestClient pokeApiClient(@Value(&quot;${pokeapi.base-url}&quot;) String baseUrl) {
 <span class="fc" id="L13">        return RestClient.builder()</span>
 <span class="fc" id="L14">                .baseUrl(baseUrl)</span>

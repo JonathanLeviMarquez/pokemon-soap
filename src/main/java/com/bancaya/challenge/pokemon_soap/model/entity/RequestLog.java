@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import java.time.OffsetDateTime;
 import lombok.*;
 
+//Entity for storing SOAP request logs in H2 database
 @Entity
 @Table(name = "request_log")
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor @Builder
@@ -16,5 +17,6 @@ public class RequestLog {
     private String method;          // example: "GetPokemon"
     private long elapsedMs;         // whole execution time
     private OffsetDateTime timestamp;
+
 
 }
